@@ -7,9 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome = 'Helena Lopes';
-  idade = 2017-2009;
+  matricula = 0;
 
-  getIdade(){
-    return this.idade;
+  adicionar() {
+    console.log(`Adicionando ${this.nome}`);//Templates literal
+
+    console.log('Com matrícula: ' + this.matricula); //Concatenando Strings
+
+    const numero = Math.round(Math.random() * 100);
+    this.nome = 'Helena ' + numero;
   }
+
+  alterarNome(event: any) {
+    this.nome = event.target.value;
+  }
+
+
 }
