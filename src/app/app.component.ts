@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome = 'Helena Lopes';
+  idade = 2017-2009;
+
+  getIdade(){
+    return this.idade;
+  }
 }
