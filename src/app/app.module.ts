@@ -7,9 +7,7 @@ import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HelloComponent,
-    BemVindoComponent
+    AppComponent
   ],
   imports: [
     BrowserModule
