@@ -1,10 +1,10 @@
 <div class="container">
   <div class="alert alert-success" role="alert">
-    Funcionária adicionada <strong>{{nome}} </strong>
+    Aluno(a) adicionado(a) <strong>{{nome}} </strong>, com matrícula: <strong>{{matricula}}</strong>
   </div>
   <div class="form-row align-items-center">
 
-    <div class="col-sm-8">
+    <div class="col-sm-9">
       <div class="form-group">
         <label>Nome</label>
         <input type="text" class="form-control" autofocus="autofocus" (input)="alterarNome($event)" value="{{nome}}">
@@ -13,11 +13,14 @@
     <div class="col-sm-3">
       <div class="form-group">
         <label>Matrícula</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" #matriculaAluno>
       </div>
     </div>
     <div class="col-sm-1">
       <button type="button" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+    </div>
+    <div class="col-sm-1">
+      <button type="button" class="btn btn-success" (click)="adicionarMatricula(matriculaAluno.value)">Matricular</button>
     </div>
 
   </div>

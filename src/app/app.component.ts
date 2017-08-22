@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nome = 'Helena Lopes';
-  matricula = 0;
+  nome: String = 'Helena Lopes';
+  matricula: String = "";
 
   adicionar() {
     console.log(`Adicionando ${this.nome}`);//Templates literal
@@ -21,6 +21,11 @@ export class AppComponent {
   alterarNome(event: any) {
     this.nome = event.target.value;
   }
+
+  adicionarMatricula(matricula: String){
+    this.matricula = matricula
+  }
+
 
 
 }
