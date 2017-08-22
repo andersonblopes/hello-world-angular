@@ -1,27 +1,15 @@
 <div class="container">
-  <div class="alert alert-success" role="alert">
+  <!--Diretiva *ngIf, Utiliza-se o * por se tratar de uma diretiva estrutural -->
+  <div class="alert alert-success" role="alert" *ngIf="adicionado">
     Aluno(a) adicionado(a) <strong>{{nome}} </strong>, com matrícula: <strong>{{matricula}}</strong>
   </div>
-  <div class="form-row align-items-center">
-
-    <div class="col-sm-9">
-      <div class="form-group">
-        <label>Nome</label>
-        <input type="text" class="form-control" autofocus="autofocus" [(ngModel)]="nome">
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="form-group">
-        <label>Matrícula</label>
-        <input type="text" class="form-control" [(ngModel)]="matricula">
-      </div>
-    </div>
-    <div class="col">
-      <button type="button" [disabled]="nome.length == 0" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
-    </div>
-    <div class="col">
-      <button type="button"  class="btn btn-success" (click)="adicionarMatricula()">Matricular</button>
-    </div>
-
+  <!--Diretiva hidden, Apenas oculta(display: none) componente-->
+  <div class="alert alert-info" role="alert" [hidden]="adicionado">
+    Insira o nome do Aluno
   </div>
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" (focus)="adicionado = false" autofocus="autofocus" [(ngModel)]="nome">
+  </div>
+  <button type="button" [disabled]="nome.length == 0" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
 </div>
