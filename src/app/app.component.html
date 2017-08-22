@@ -7,7 +7,8 @@
     <div class="col-sm-9">
       <div class="form-group">
         <label>Nome</label>
-        <input type="text" class="form-control" autofocus="autofocus" (input)="alterarNome($event)" value="{{nome}}">
+        <input type="text" class="form-control" autofocus="autofocus" (input)="alterarNome($event)" 
+          [value]="nome">
       </div>
     </div>
     <div class="col-sm-3">
@@ -16,11 +17,11 @@
         <input type="text" class="form-control" #matriculaAluno>
       </div>
     </div>
-    <div class="col-sm-1">
-      <button type="button" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+    <div class="col">
+      <button type="button" [disabled]="nome.length == 0" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
     </div>
-    <div class="col-sm-1">
-      <button type="button" class="btn btn-success" (click)="adicionarMatricula(matriculaAluno.value)">Matricular</button>
+    <div class="col">
+      <button type="button"  class="btn btn-success" (click)="adicionarMatricula(matriculaAluno.value)">Matricular</button>
     </div>
 
   </div>
