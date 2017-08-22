@@ -19,19 +19,7 @@
 
 
     <div class="col-3" *ngFor="let aluno of alunos">
-      <div class="card">
-        <img class="card-img-top" src="https://randomuser.me/api/portraits/women/{{aluno.id}}.jpg" alt="Card image cap">
-        <div class="card-block" align="center">
-          <strong>{{aluno.nome}}</strong>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-3" *ngFor="let a of alunos; let i = index">
-        <div class="card">
-            <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{i+1}}.jpg">
-            <div class="card-block  text-center">{{a.nome}}</div>
-        </div>
+      <app-aluno-card [object]="aluno"></app-aluno-card>
     </div>
 
 
