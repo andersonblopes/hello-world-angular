@@ -1,7 +1,7 @@
 <div class="container">
   <!--Diretiva *ngIf, Utiliza-se o * por se tratar de uma diretiva estrutural -->
   <div class="alert alert-success" role="alert" *ngIf="adicionado">
-    Aluno(a) adicionado(a) <strong>{{nome}} </strong>, com matrícula: <strong>{{matricula}}</strong>
+    Aluno(a) adicionado(a) <strong>{{nome}} </strong>
   </div>
   <!--Diretiva hidden, Apenas oculta(display: none) componente-->
   <div class="alert alert-info" role="alert" [hidden]="adicionado">
@@ -11,5 +11,29 @@
     <label>Nome</label>
     <input type="text" class="form-control" (focus)="adicionado = false" autofocus="autofocus" [(ngModel)]="nome">
   </div>
+
   <button type="button" [disabled]="nome.length == 0" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+
+
+  <div class="row" style="margin-top: 20px;">
+
+
+    <div class="col-3" *ngFor="let aluno of alunos">
+      <div class="card">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/women/{{aluno.id}}.jpg" alt="Card image cap">
+        <div class="card-block" align="center">
+          <strong>{{aluno.nome}}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3" *ngFor="let a of alunos; let i = index">
+        <div class="card">
+            <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{i+1}}.jpg">
+            <div class="card-block  text-center">{{a.nome}}</div>
+        </div>
+    </div>
+
+
+  </div>
 </div>
