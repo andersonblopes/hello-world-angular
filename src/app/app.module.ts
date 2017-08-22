@@ -4,11 +4,13 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AlunoCardComponent } from './aluno-card/aluno-card.component';
+import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlunoCardComponent
+    AlunoCardComponent,
+    AlunoFormComponent
   ],
   imports: [
     BrowserModule,

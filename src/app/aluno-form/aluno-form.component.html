@@ -1,0 +1,14 @@
+<!--Diretiva *ngIf, Utiliza-se o * por se tratar de uma diretiva estrutural -->
+<div class="alert alert-success" role="alert" *ngIf="adicionado">
+  Aluno(a) adicionado(a) <strong>{{nome}} </strong>
+</div>
+<!--Diretiva hidden, Apenas oculta(display: none) componente-->
+<div class="alert alert-info" role="alert" [hidden]="adicionado">
+  Insira o nome do Aluno
+</div>
+<div class="form-group">
+  <label>Nome</label>
+  <input type="text" class="form-control" (focus)="adicionado = false" autofocus="autofocus" [(ngModel)]="nome">
+</div>
+
+<button type="button" [disabled]="nome.length == 0" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
