@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome: String = '';
-  matricula: String = "";
+  matricula: String = '';
 
   adicionar() {
     console.log(`Adicionando ${this.nome}`);//Templates literal
@@ -22,10 +22,8 @@ export class AppComponent {
     this.nome = event.target.value;
   }
 
-  adicionarMatricula(matricula: String){
-    this.matricula = matricula
+  adicionarMatricula(event: any) {
+    this.matricula = event.target.value;
   }
-
-
 
 }
