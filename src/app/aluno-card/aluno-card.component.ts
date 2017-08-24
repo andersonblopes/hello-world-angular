@@ -25,4 +25,12 @@ export class AlunoCardComponent {
     };
   }
 
+  isAdmin(){
+    return this.aluno.nome.startsWith('H');
+  }
+
+  //getListaClassesCss(){
+    //return ['badge', 'badge-secondary'];
+  //}
+
 }
