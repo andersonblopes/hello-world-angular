@@ -15,4 +15,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AlunoCardComponent {
   @Input('object') aluno : any
 
+  getEstiloCardBlock(){
+    return {
+      textAlign: 'right !inportant',
+      //'height': this.aluno.id + '%',
+      'border-width.px': this.aluno.id,
+      backgroundColor: this.aluno.id % 2 == 0 ? 'lightBlue' : 'lightGreen'
+      
+    };
+  }
+
 }
