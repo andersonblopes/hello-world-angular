@@ -9,7 +9,7 @@
 <div class="form-group">
   <label>Nome</label>
   <input type="text" class="form-control" (focus)="adicionado = false"
-    autofocus="autofocus" [(ngModel)]="nome" appCampoColorido>
+    [(ngModel)]="nome" appCampoColorido>
 </div>
 
 <button type="button" [disabled]="nome.length == 0" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
