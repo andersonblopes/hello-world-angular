@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
    `
       .card-block{
         text-transform: uppercase;
-      }  
+      }
     `
   ]
 })
@@ -21,7 +21,7 @@ export class AlunoCardComponent {
       //'height': this.aluno.id + '%',
       'border-width.px': this.aluno.id,
       backgroundColor: this.aluno.id % 2 == 0 ? 'lightBlue' : 'lightGreen'
-      
+
     };
   }
 

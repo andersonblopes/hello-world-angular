@@ -5,12 +5,14 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AlunoCardComponent } from './aluno-card/aluno-card.component';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
+import { CampoColoridoDirective } from './campo-colorido.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlunoCardComponent,
-    AlunoFormComponent
+    AlunoFormComponent,
+    CampoColoridoDirective
   ],
   imports: [
     BrowserModule,
