@@ -1,5 +1,11 @@
-<div class="container">
+<app-cadastro-cliente></app-cadastro-cliente>
 
+<br>
+<br>
+<hr>
+<br>
+<br>
+<div class="container">
   <app-aluno-form (cadastrado)="aoCadastrar($event)"></app-aluno-form>
 
   <div class="row" style="margin-top: 20px;">
@@ -18,3 +24,4 @@
   <h4>{{ preco | number: '1.2-2' }}</h4>
   <h4>{{ troco | currency: 'BRL' : 'true' : '1.2-2' }}</h4>
 </div>
+
