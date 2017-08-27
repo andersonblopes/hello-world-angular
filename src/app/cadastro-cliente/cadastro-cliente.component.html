@@ -10,21 +10,29 @@
         <div class="form-group">
           <label class="form-control-label">Nome</label>
           <input type="text" class="form-control" name="primeiroNome"
-            [(ngModel)] = "cliente.nome" required minlength="10" pattern="[a-zA-Z ]*">
+            [(ngModel)] = "cliente.nome" required minlength="10" pattern="[a-zA-Z ]*" #nome = "ngModel">
+
+            <div style="color: orange;" *ngIf="nome.hasError('required')">Informe um nome </div>
+            <div style="color: orange;" *ngIf="nome.hasError('minlength')">O nome deve ter mais de 10 caracteres</div>
+            <div style="color: orange;" *ngIf="nome.hasError('pattern')">Informe um nome somente contendo letras</div>
         </div>
 
         <div class="form-group">
             <label class="form-control-label">E-mail</label>
             <input type="text" class="form-control" name="emailAddress"
-              [(ngModel)]="cliente.email" required email>
+              [(ngModel)]="cliente.email" email #email = "ngModel">
+
+              <div style="color: orange;" *ngIf="email.invalid">Informe um e-mail válido </div>
           </div>
 
           <div class="form-group">
               <label class="form-control-label">Profissão</label>
-              <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required>
+              <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required #profissao = "ngModel">
                 <option value="">Selecione</option>
                 <option *ngFor="let p of profissoes" [value]="p">{{p}}</option>
               </select>
+
+              <div style="color: orange;" *ngIf="profissao.invalid">Informe uma profissão </div>
           </div>
 
           <button type="submit" [disabled]="!usuarioForm.valid" class="btn btn-primary">Cadastrar</button>
