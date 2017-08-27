@@ -19,6 +19,8 @@ export class CadastroClienteComponent {
 
   salvar(form: NgForm) {
     console.log(form.value);
+
+    form.reset({primeiroNome: 'Anderson Lopes', profissao: ''});
   }
 
 }
