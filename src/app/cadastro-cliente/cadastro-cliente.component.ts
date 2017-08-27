@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 export class CadastroClienteComponent {
 
   profissoes = ['Advogado', 'Analista de Sistemas', 'Estudante', 'Engenheiro', 'Recepcionista', 'Outra'];
+  profissaoDefault = 'Outra';
 
   salvar(form: NgForm) {
     console.log(form.value.nome);

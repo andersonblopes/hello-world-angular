@@ -15,8 +15,8 @@
 
           <div class="form-group">
               <label class="form-control-label">Profissão</label>
-              <select class="form-control" name="profissao" ngModel>
-                <option value="">Selecione</option>
+              <select class="form-control" name="profissao" [ngModel]="profissaoDefault">
+
                 <option *ngFor="let p of profissoes" [value]="p">{{p}}</option>
               </select>
           </div>
