@@ -8,8 +8,12 @@ import { NgForm } from '@angular/forms';
 })
 export class CadastroClienteComponent {
 
+  profissoes = ['Advogado', 'Analista de Sistemas', 'Estudante', 'Engenheiro', 'Recepcionista', 'Outra'];
+
   salvar(form: NgForm) {
     console.log(form.value.nome);
+    console.log(form.value.email);
+    console.log(form.value.profissao);
   }
 
 }
