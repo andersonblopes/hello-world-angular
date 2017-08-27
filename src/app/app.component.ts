@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  nome = 'Anderson Lopes';
+  dataNascimento = new Date(1981, 11, 13);
+  preco = 1250.25;
+  troco = 750.75;
+
   alunos = [];
 
   aoCadastrar(aluno){
